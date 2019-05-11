@@ -2,7 +2,7 @@
 
 Student At-Risk Management System
 
-[![Build Status](https://travis-ci.org/AndrewBellamy/SARMS.svg?branch=master)https://travis-ci.org/AndrewBellamy/SARMS]
+[![Build Status](https://travis-ci.org/AndrewBellamy/SARMS.svg?branch=master)]
 
 ## Version
 
