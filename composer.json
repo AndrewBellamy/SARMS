@@ -1,0 +1,21 @@
+{
+    "name": "sit321/sarms",
+    "description": "Student At-Risk Management System",
+    "type": "project",
+    "authors": [
+        {
+            "name": "AndrewBellamy",
+            "email": "andymanbellamy@gmail.com"
+        }
+    ],
+    "scripts": {
+        "lint": "phplint"
+    },
+    "require": {
+        "twbs/bootstrap": "4.0.0"
+    },
+    "require-dev": {
+        "overtrue/phplint": "^1.1",
+        "phpunit/phpunit": "8"
+    }
+}

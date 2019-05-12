@@ -1,0 +1,9 @@
+html, body { 
+    height: 100%;
+    --cool-grey: rgb(60,57,64);
+    --vivid-navy: rgb(1,17,38);
+    --rose-gold: rgb(242,134,94);
+    --flat-burnt-sienna: rgb(140,92,74);
+    --pale-burnt-sienna: rgb(242,164,136);
+}
+body { margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; background-color: var(--cool-grey); }
