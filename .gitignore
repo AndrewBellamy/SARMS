@@ -1,2 +1,5 @@
 /vendor/
 /build/
+/debug/
+/node_modules/
+.phpunit.result.cache

@@ -3,12 +3,30 @@ language: php
 php:
   - 7.3.5
 
+env:
+  global:
+    - 'SFTP_USER=[abellamy]'
+    - 'SFTP_PASSWORD=[password]'
+
+stages:
+  - name: Quality
+  - name: Build
+    if: branch = develop AND type = merge
+
 before_script:
   - composer self-update
   - composer require
+  - yarn
 
-script: composer lint
+jobs:
+  include:
+    - stage: Quality
+      script: composer lint
+    - stage: Quality
+      script: composer test
+    - stage: Build
+      script: composer build
 
 notifications:
   on_success: never
-  on_failure: always
+  on_failure: never

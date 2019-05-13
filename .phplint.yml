@@ -1,6 +1,6 @@
 path: ./src
 jobs: 5
-cache: build/phplint.cache
+cache: debug/phplint.cache
 extensions:
   - php
 exclude:

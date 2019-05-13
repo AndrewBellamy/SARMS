@@ -10,9 +10,16 @@
     ],
     "scripts": {
         "lint": "phplint",
+        "test": "phpunit --testdox",
+        "build": "grunt build",
         "run": [
             "Composer\\Config::disableProcessTimeout",
             "php -S localhost:8080 -t src/api/"
+        ]
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
         ]
     },
     "require": {
