@@ -6,7 +6,7 @@ class Router {
         "POST"
     );
 
-    function __construct(IReqeust $request) {
+    function __construct(IRequest $request) {
         $this->request = $request;
     }
 
@@ -38,7 +38,7 @@ class Router {
     }
 
     function resolve() {
-        $methodDictionary = $this->{strtolower($this->request->reqestMethod)};
+        $methodDictionary = $this->{strtoupper($this->request->requestMethod)};
         $formattedRoute = $this->formatRoute($this->request->requestUri);
         $method = $methodDictionary[$formattedRoute];
 
@@ -49,6 +49,12 @@ class Router {
 
         echo call_user_func_array($method, array($this->request));
     }
+    /* Convenience Method for debugging */
+    function console_log( $data ){
+        echo '<script>';
+        echo 'console.log('. json_encode( $data ) .')';
+        echo '</script>';
+      }
 
     function __destruct() {
         $this->resolve();

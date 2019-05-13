@@ -9,7 +9,11 @@
         }
     ],
     "scripts": {
-        "lint": "phplint"
+        "lint": "phplint",
+        "run": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8080 -t src/api/"
+        ]
     },
     "require": {
         "twbs/bootstrap": "4.0.0"
