@@ -12,14 +12,14 @@ module.exports = function(grunt) {
         sftp: {
             deakin: {
                 files: {
-                    "./": ["build/api/**"]
+                    "./": ["src/**"]
                 },
                 options: {
                     path: '/home/abellamy/public_html/SARMS',
                     username: '<%= process.env.CD_USR %>',
                     password: '<%= process.env.CD_PWD %>',
                     host: 'ftp.deakin.edu.au',
-                    srcBasePath: 'build/',
+                    srcBasePath: 'src/',
                     createDirectories: true,
                     showProgress: true
                 }

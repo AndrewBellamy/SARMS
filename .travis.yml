@@ -9,10 +9,8 @@ env:
 
 stages:
   - name: Quality
-  - name: Build
-    if: branch = develop AND type = merge
   - name: Deploy
-    if: branch = develop AND type = merge
+    if: head_branch = develop
 
 before_script:
   - composer self-update
@@ -22,12 +20,13 @@ before_script:
 jobs:
   include:
     - stage: Quality
+      name: "Lint"
       script: composer lint
     - stage: Quality
+      name: "Unit Tests"
       script: composer test
-    - stage: Build
-      script: composer build
     - stage: Deploy
+      name: "Deploy"
       script: composer deploy
 
 notifications:
