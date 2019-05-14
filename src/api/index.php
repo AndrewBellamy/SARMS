@@ -4,6 +4,8 @@ error_reporting(E_ALL | E_STRICT);
 
 include_once 'Request.php';
 include_once 'Router.php';
+
+echo 'Current PHP version: ' . phpversion();
 $router = new Router(new Request);
 
 
