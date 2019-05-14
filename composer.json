@@ -12,6 +12,7 @@
         "lint": "phplint",
         "test": "phpunit --testdox",
         "build": "grunt build",
+        "deploy": "grunt deploy -v",
         "run": [
             "Composer\\Config::disableProcessTimeout",
             "php -S localhost:8080 -t src/api/"

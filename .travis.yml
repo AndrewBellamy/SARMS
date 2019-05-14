@@ -5,12 +5,13 @@ php:
 
 env:
   global:
-    - 'SFTP_USER=[abellamy]'
-    - 'SFTP_PASSWORD=[password]'
+    - CI_HOST=ftp.deakin.edu.au
 
 stages:
   - name: Quality
   - name: Build
+    if: branch = develop AND type = merge
+  - name: Deploy
     if: branch = develop AND type = merge
 
 before_script:
@@ -26,6 +27,8 @@ jobs:
       script: composer test
     - stage: Build
       script: composer build
+    - stage: Deploy
+      script: composer deploy
 
 notifications:
   on_success: never

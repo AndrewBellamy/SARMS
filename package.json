@@ -7,6 +7,7 @@
   "private": true,
   "devDependencies": {
     "grunt": "^1.0.4",
-    "grunt-contrib-copy": "^1.0.0"
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-ssh": "^0.12.9"
   }
 }
